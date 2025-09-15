@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>도서 재고 관리</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- 검색어 입력 -->
+  <h1>📚 도서 재고 관리</h1>
+
+  <!-- 검색어 입력 -->
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="도서 제목, 저자를 검색해보세요."
+    aria-label="도서 검색"
+  />
+
+  <!-- 카테고리 선택 -->
+  <select id="categorySelect" aria-label="카테고리 선택">
+    <option value="">카테고리 선택하기</option>
+    <option value="경영/경제">경영/경제</option>
+    <option value="소설">소설</option>
+    <option value="에세이">에세이</option>
+    <option value="자기개발">자기개발</option>
+    <option value="교재">교재</option>
+  </select>
+
+  <!-- ‘재고 있는 항목만’ 토글 -->
+  <div class="filter-row">
+    <label class="filter-label">재고 있는 항목만 보기</label>
+    <label class="switch">
+      <input type="checkbox" id="stockToggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- 도서 테이블 -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>제목</th>
+          <th>저자</th>
+          <th>가격</th>
+          <th>재고</th>
+          <th>카테고리</th>
+        </tr>
+      </thead>
+      <tbody id="bookTable"></tbody>
+    </table>
+
+  <!-- 재고 업데이트 버튼 -->
+  <div class="footer">
+    <button id="updateBtn" class="update-btn">재고 업데이트하기 🔁</button>
+  </div>
+
+  <!-- 페이지네이션 -->
+  <div id="pagination" class="pagination"></div>
+
+  <!-- 동작 스크립트 -->
+  <script src="./app.js"></script>
+</body>
+</html>

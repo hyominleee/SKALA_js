@@ -1,0 +1,204 @@
+/* -------------------------- */
+/* 전체 레이아웃 / 타이포그래피 */
+/* -------------------------- */
+
+body {
+  font-family: sans-serif;
+  padding: 40px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* -------------------------- */
+/* 입력 / 셀렉트 / 필터 영역   */
+/* -------------------------- */
+input,
+select {
+  padding: 12px;
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: 320px;
+}
+
+.filter-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+.filter-label {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+/* -------------------------- */
+/* 테이블 영역                 */
+/* -------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 12px 10px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+th {
+  background: #f2f2f2;
+}
+
+tbody tr {
+  height: 50px;
+}
+
+/* -------------------------- */
+/* 하단 버튼 영역              */
+/* -------------------------- */
+.footer {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.update-btn {
+  font-size: 18px;
+  padding: 12px 40px;
+  background: #a6f51a;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.update-btn:disabled {
+  background: #ccc;
+  cursor: default;
+}
+
+/* -------------------------- */
+/* 토글 스위치                 */
+/* -------------------------- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 6px;
+  right: 6px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #a6f51a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* -------------------------- */
+/* 페이지네이션                */
+/* -------------------------- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+/* -------------------------- */
+/* 재고 편집 UI                */
+/* -------------------------- */
+table td { vertical-align: middle; }
+
+.stock-editor {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.stock-input {
+  width: 60px;
+  height: 24px;
+  padding: 0 4px;
+  font: inherit;
+  line-height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.step-btn {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font: inherit;
+  line-height: 1;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.step-btn:active { transform: translateY(1px); }
+
+th:nth-child(4), td:nth-child(4) { width: 120px; }
